@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* html,
+* body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+* html main,
+* body main {
+  display: flex;
+}
+* html main div,
+* body main div {
+  flex: 1;
+}
+* html .light,
+* body .light {
+  position: relative;
+}
+* html .light div,
+* body .light div {
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+  font-feature-settings: "clig" off, "liga" off;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+}
+* html .light div h1,
+* body .light div h1 {
+  color: #383838;
+  font-size: 28px;
+  /* 50% */
+}
+* html .light div h3,
+* body .light div h3 {
+  color: #BABABA;
+  font-size: 21px;
+  /* 66.667% */
+}
+* html .dark,
+* body .dark {
+  background-color: #333;
+  height: 100vh;
+  position: relative;
+}
+* html .calender-dark,
+* html .calender-light,
+* body .calender-dark,
+* body .calender-light {
+  height: 50vh;
+  flex-shrink: 0;
+}
+* html .calender-dark .main-content,
+* html .calender-light .main-content,
+* body .calender-dark .main-content,
+* body .calender-light .main-content {
+  background-color: #464646;
+  display: inline-flex;
+  transform: rotate(8.683deg);
+  padding: 24px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 22px;
+  border-radius: 8px;
+  background: #464646;
+  /* dropdown */
+  box-shadow: 2px 16px 19px 0px rgba(0, 0, 0, 0.09);
+}
+* html .calender-dark .month,
+* html .calender-light .month,
+* body .calender-dark .month,
+* body .calender-light .month {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-self: stretch;
+  color: #FFF;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  /* H5 */
+}
+* html .calender-dark .month h3,
+* html .calender-light .month h3,
+* body .calender-dark .month h3,
+* body .calender-light .month h3 {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 14px;
+}
+* html .calender-dark .weekdays,
+* html .calender-light .weekdays,
+* body .calender-dark .weekdays,
+* body .calender-light .weekdays {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+* html .calender-dark .weekdays div,
+* html .calender-light .weekdays div,
+* body .calender-dark .weekdays div,
+* body .calender-light .weekdays div {
+  display: flex;
+  width: 30px;
+  height: 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+* html .calender-dark .weekdays div p,
+* html .calender-light .weekdays div p,
+* body .calender-dark .weekdays div p,
+* body .calender-light .weekdays div p {
+  color: var(--Base-Gray-40, #B5BEC6);
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  /* Overline */
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 12px;
+  /* 120% */
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+* html .calender-dark .days,
+* html .calender-light .days,
+* body .calender-dark .days,
+* body .calender-light .days {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  height: 100%;
+  width: 100%;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+* html .calender-dark .days div,
+* html .calender-light .days div,
+* body .calender-dark .days div,
+* body .calender-light .days div {
+  display: flex;
+  width: 30px;
+  height: 30px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  /* H4 */
+  /* 112.5% */
+}
+* html .calender-dark .days div h4,
+* html .calender-light .days div h4,
+* body .calender-dark .days div h4,
+* body .calender-light .days div h4 {
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  width: 20px;
+  height: 15px;
+  flex-shrink: 0;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+}
+* html .calender-dark .days .active,
+* html .calender-light .days .active,
+* body .calender-dark .days .active,
+* body .calender-light .days .active {
+  background-color: #f04d23;
+  border-radius: 50%;
+}
+* html .calender-light,
+* body .calender-light {
+  color: #333;
+}
+* html .calender-light .main-content,
+* body .calender-light .main-content {
+  background-color: white;
+  box-shadow: 2px 16px 19px 0px rgba(0, 0, 0, 0.09);
+}
+* html .calender-light .month,
+* html .calender-light .weekdays,
+* html .calender-light .days,
+* body .calender-light .month,
+* body .calender-light .weekdays,
+* body .calender-light .days {
+  color: #333;
+}
+* html .calender-dark,
+* body .calender-dark {
+  position: absolute;
+  top: 44%;
+  left: -9%;
+}
+* html .calender-light,
+* body .calender-light {
+  position: absolute;
+  top: 21%;
+  left: -27%;
+  z-index: 1;
+}
+
+@media only screen and (max-width: 850px) {
+  * html .calender-dark,
+  * body .calender-dark {
+    top: 44%;
+    left: -24%;
+  }
+  * html .calender-light,
+  * body .calender-light {
+    top: 21%;
+    left: -48%;
+  }
+  * html .light div h1,
+  * body .light div h1 {
+    font-size: 4vw;
+  }
+  * html .light div h3,
+  * body .light div h3 {
+    font-size: 2vw;
+  }
+}
+@media only screen and (max-width: 700px) {
+  * html .calender-dark,
+  * body .calender-dark {
+    top: 44%;
+    left: -29%;
+  }
+  * html .calender-light,
+  * body .calender-light {
+    top: 21%;
+    left: -58%;
+  }
+}
+@media only screen and (max-width: 560px) {
+  * html .calender-dark,
+  * html .calender-light,
+  * body .calender-dark,
+  * body .calender-light {
+    display: none;
+  }
+}/*# sourceMappingURL=calender-layout-2-style.css.map */
