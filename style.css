@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+* html,
+* body {
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+}
+* html main,
+* body main {
+  display: flex;
+  height: 100%;
+}
+* html .wrapper-dark, * html .wrapper-light,
+* body .wrapper-dark,
+* body .wrapper-light {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  height: 100%;
+  width: 100%;
+}
+* html .wrapper-dark .main-content, * html .wrapper-light .main-content,
+* body .wrapper-dark .main-content,
+* body .wrapper-light .main-content {
+  width: 700px;
+  height: auto;
+  background-color: #464646;
+  border-radius: 15px;
+  padding-bottom: 30px;
+}
+* html .wrapper-dark .month, * html .wrapper-light .month,
+* body .wrapper-dark .month,
+* body .wrapper-light .month {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  padding: 30px 0;
+}
+* html .wrapper-dark .month h3, * html .wrapper-light .month h3,
+* body .wrapper-dark .month h3,
+* body .wrapper-light .month h3 {
+  font-size: 26px;
+}
+* html .wrapper-dark .weekdays, * html .wrapper-light .weekdays,
+* body .wrapper-dark .weekdays,
+* body .wrapper-light .weekdays {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  padding: 30px 40px;
+  text-transform: uppercase;
+}
+* html .wrapper-dark .days, * html .wrapper-light .days,
+* body .wrapper-dark .days,
+* body .wrapper-light .days {
+  display: grid;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  color: white;
+  text-align: center;
+  font-size: 26px;
+  height: 100%;
+  padding: 0 40px;
+}
+* html .wrapper-dark .days div, * html .wrapper-light .days div,
+* body .wrapper-dark .days div,
+* body .wrapper-light .days div {
+  padding: 32px 0;
+}
+* html .wrapper-dark .days .active, * html .wrapper-light .days .active,
+* body .wrapper-dark .days .active,
+* body .wrapper-light .days .active {
+  background-color: #f04d23;
+  border-radius: 50%;
+}
+* html .wrapper-light,
+* body .wrapper-light {
+  background-color: #fff;
+  color: #333;
+}
+* html .wrapper-light .main-content,
+* body .wrapper-light .main-content {
+  background-color: white;
+  box-shadow: 2px 16px 19px 0px rgba(0, 0, 0, 0.09);
+}
+* html .wrapper-light .month, * html .wrapper-light .weekdays, * html .wrapper-light .days,
+* body .wrapper-light .month,
+* body .wrapper-light .weekdays,
+* body .wrapper-light .days {
+  color: #333;
+}
+
+@media (max-width: 1600px) {
+  * html main .wrapper-dark .main-content, * html main .wrapper-light .main-content, * body main .wrapper-dark .main-content, * body main .wrapper-light .main-content {
+    width: 80%;
+  }
+  * html main .wrapper-dark .main-content .weekdays, * html main .wrapper-light .main-content .weekdays, * body main .wrapper-dark .main-content .weekdays, * body main .wrapper-light .main-content .weekdays {
+    padding: inherit 0;
+  }
+  * html main .wrapper-dark .main-content .days div, * html main .wrapper-light .main-content .days div, * body main .wrapper-dark .main-content .days div, * body main .wrapper-light .main-content .days div {
+    padding: 25px 0;
+  }
+}
+@media (max-width: 1600px) and (max-width: 1200px) {
+  * html main, * body main {
+    display: block;
+    scroll-snap-type: y mandatory;
+  }
+  * html main .wrapper-dark, * html main .wrapper-light, * body main .wrapper-dark, * body main .wrapper-light {
+    scroll-snap-align: center;
+  }
+  * html main .wrapper-dark .main-content, * html main .wrapper-light .main-content, * body main .wrapper-dark .main-content, * body main .wrapper-light .main-content {
+    width: 80%;
+  }
+  * html main .wrapper-dark .main-content .weekdays, * html main .wrapper-light .main-content .weekdays, * body main .wrapper-dark .main-content .weekdays, * body main .wrapper-light .main-content .weekdays {
+    padding: inherit 0;
+  }
+}
+@media (max-width: 650px) {
+  * html main, * body main {
+    display: block;
+  }
+  * html main .wrapper-dark .main-content .month, * html main .wrapper-light .main-content .month, * body main .wrapper-dark .main-content .month, * body main .wrapper-light .main-content .month {
+    padding-bottom: 0;
+  }
+  * html main .wrapper-dark .main-content .days div, * html main .wrapper-light .main-content .days div, * body main .wrapper-dark .main-content .days div, * body main .wrapper-light .main-content .days div {
+    padding: 20%;
+  }
+}
+@media (max-width: 500px) {
+  * html main, * body main {
+    display: block;
+  }
+  * html main .wrapper-dark .main-content .month h3, * html main .wrapper-light .main-content .month h3, * body main .wrapper-dark .main-content .month h3, * body main .wrapper-light .main-content .month h3 {
+    font-size: 18px;
+  }
+  * html main .wrapper-dark .main-content .weekdays, * html main .wrapper-light .main-content .weekdays, * body main .wrapper-dark .main-content .weekdays, * body main .wrapper-light .main-content .weekdays {
+    font-size: 12px;
+    padding-top: 22px;
+    padding-bottom: 12px;
+  }
+  * html main .wrapper-dark .main-content .days, * html main .wrapper-light .main-content .days, * body main .wrapper-dark .main-content .days, * body main .wrapper-light .main-content .days {
+    font-size: 12px;
+  }
+  * html main .wrapper-dark .main-content .days div, * html main .wrapper-light .main-content .days div, * body main .wrapper-dark .main-content .days div, * body main .wrapper-light .main-content .days div {
+    padding: 20%;
+  }
+}/*# sourceMappingURL=style.css.map */
